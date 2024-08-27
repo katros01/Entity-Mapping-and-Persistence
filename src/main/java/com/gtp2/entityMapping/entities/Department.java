@@ -1,5 +1,6 @@
 package com.gtp2.entityMapping.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -24,6 +25,7 @@ public class Department {
 
     @ManyToOne
     @JoinColumn(name = "director_id", nullable = false)
+    @JsonIgnore
     private Doctor director;
 
     @OneToMany(mappedBy = "department")

@@ -29,6 +29,4 @@ public class Patient {
     @Column(name = "telephone_number")
     private String telephoneNumber;
 
-
-
 }
